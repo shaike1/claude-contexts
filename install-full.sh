@@ -48,7 +48,7 @@ mkdir -p ~/.claude-sync
 # Download the extended sync script
 echo "📥 Downloading claude-sync-extended.py..."
 curl -sSL -o ~/claude-sync-extended.py \
-    https://raw.githubusercontent.com/shaike1/claude-contexts/main/claude-sync-extended.py
+    https://raw.githubusercontent.com/shaike1/claude-sync/main/claude-sync-extended.py
 chmod +x ~/claude-sync-extended.py
 
 # Create enhanced slash commands

@@ -3,7 +3,7 @@
 **Seamlessly sync your Claude Code context and data across multiple PCs using GitHub**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub stars](https://img.shields.io/github/stars/shaike1/claude-contexts.svg)](https://github.com/shaike1/claude-contexts/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/shaike1/claude-sync.svg)](https://github.com/shaike1/claude-sync/stargazers)
 
 ## 🎯 What This Solves
 
@@ -28,25 +28,25 @@ Using Claude Code on multiple PCs? Tired of manually copying `CLAUDE.md` files b
 
 ### Basic Context Sync
 ```bash
-curl -sSL https://raw.githubusercontent.com/shaike1/claude-contexts/main/install.sh | bash -s -- https://github.com/YOUR_USERNAME/YOUR_REPO
+curl -sSL https://raw.githubusercontent.com/shaike1/claude-sync/main/install.sh | bash -s -- https://github.com/YOUR_USERNAME/YOUR_REPO
 ```
 
 ### Full Data Sync (Recommended)
 ```bash
-curl -sSL https://raw.githubusercontent.com/shaike1/claude-contexts/main/install-full.sh | bash -s -- https://github.com/YOUR_USERNAME/YOUR_REPO full
+curl -sSL https://raw.githubusercontent.com/shaike1/claude-sync/main/install-full.sh | bash -s -- https://github.com/YOUR_USERNAME/YOUR_REPO full
 ```
 
 ## 🛠️ Quick Setup
 
 ### 1. Create GitHub Repository
 1. Go to [GitHub](https://github.com/new)
-2. Create a **private** repository named `claude-contexts`
+2. Create a **private** repository named `claude-sync`
 3. Don't initialize with README
 
 ### 2. Install on First PC
 ```bash
 # Replace with your GitHub username
-curl -sSL https://raw.githubusercontent.com/shaike1/claude-contexts/main/install-full.sh | bash -s -- https://github.com/YOUR_USERNAME/claude-contexts full
+curl -sSL https://raw.githubusercontent.com/shaike1/claude-sync/main/install-full.sh | bash -s -- https://github.com/YOUR_USERNAME/claude-sync full
 ```
 
 ### 3. Install on Other PCs
@@ -120,12 +120,12 @@ If you prefer manual setup:
 
 ```bash
 # 1. Download the sync scripts
-curl -o ~/claude-sync.py https://raw.githubusercontent.com/shaike1/claude-contexts/main/claude-sync.py
-curl -o ~/claude-sync-extended.py https://raw.githubusercontent.com/shaike1/claude-contexts/main/claude-sync-extended.py
+curl -o ~/claude-sync.py https://raw.githubusercontent.com/shaike1/claude-sync/main/claude-sync.py
+curl -o ~/claude-sync-extended.py https://raw.githubusercontent.com/shaike1/claude-sync/main/claude-sync-extended.py
 chmod +x ~/claude-sync*.py
 
 # 2. Configure your repository
-~/claude-sync-extended.py setup --git-repo https://github.com/USERNAME/claude-contexts.git --level full
+~/claude-sync-extended.py setup --git-repo https://github.com/USERNAME/claude-sync.git --level full
 
 # 3. Create slash commands (see install script for details)
 mkdir -p ~/.claude-code/slash-commands
@@ -158,7 +158,7 @@ git config --global user.name "Your Name"
 git config --global user.email "your.email@example.com"
 
 # Test repository access
-git clone https://github.com/USERNAME/claude-contexts.git
+git clone https://github.com/USERNAME/claude-sync.git
 ```
 
 ### Sync Conflicts
@@ -192,8 +192,8 @@ Contributions welcome! Please:
 
 ### Development Setup
 ```bash
-git clone https://github.com/shaike1/claude-contexts.git
-cd claude-contexts
+git clone https://github.com/shaike1/claude-sync.git
+cd claude-sync
 chmod +x *.py *.sh
 ```
 
@@ -218,8 +218,8 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ## 📞 Support
 
-- **Issues**: [GitHub Issues](https://github.com/shaike1/claude-contexts/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/shaike1/claude-contexts/discussions)
+- **Issues**: [GitHub Issues](https://github.com/shaike1/claude-sync/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/shaike1/claude-sync/discussions)
 - **Documentation**: This README and inline code comments
 
 ---

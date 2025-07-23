@@ -1,6 +1,6 @@
 #!/bin/bash
 # Claude Context Sync - Basic installer
-# Usage: curl -sSL https://raw.githubusercontent.com/shaike1/claude-contexts/main/install.sh | bash -s -- YOUR_GITHUB_REPO
+# Usage: curl -sSL https://raw.githubusercontent.com/shaike1/claude-sync/main/install.sh | bash -s -- YOUR_GITHUB_REPO
 
 set -e
 
@@ -17,7 +17,7 @@ echo "================================"
 GITHUB_REPO="${1:-}"
 if [ -z "$GITHUB_REPO" ]; then
     echo -e "${BLUE}Enter your GitHub repository URL for storing contexts:${NC}"
-    echo "Example: https://github.com/username/claude-contexts"
+    echo "Example: https://github.com/username/claude-sync"
     read -r GITHUB_REPO
 fi
 
@@ -40,7 +40,7 @@ mkdir -p ~/.claude-sync
 
 # Download the main sync script
 echo "📥 Downloading claude-sync.py..."
-curl -sSL -o ~/claude-sync.py https://raw.githubusercontent.com/shaike1/claude-contexts/main/claude-sync-simple.py
+curl -sSL -o ~/claude-sync.py https://raw.githubusercontent.com/shaike1/claude-sync/main/claude-sync-simple.py
 chmod +x ~/claude-sync.py
 
 # Create slash commands
